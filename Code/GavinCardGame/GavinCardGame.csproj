@@ -140,9 +140,7 @@
     <None Include="Screens\Data\MainScreen.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="settings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="settings.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menus\Data\" />

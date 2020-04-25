@@ -1,4 +1,5 @@
 ﻿{
-	Name: "JacKAsterisK",
-	Port: "1565",
+  "Name": "JacKAsterisK",
+  "Port": "1565",
+  "DefaultHost": ""
 }

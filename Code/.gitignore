@@ -362,3 +362,5 @@ FodyWeavers.xsd
 !GavinCardGame/**
 GavinCardGame/obj
 GavinCardGame/Content/bin/**
+
+GavinCardGame/bin/Windows/x86/Debug/settings.json

@@ -18,7 +18,7 @@ namespace GavinCardGame.Screens.Objects
     {
         static Regex _UnReg = new Regex(@"[a-zA-Z0-9 ]+");
 
-        MText _UserNameText, _PortText;
+        MText _UserNameText, _PortText, _DefaultHostText;
 
         MButton _DoneButton;
 
@@ -26,6 +26,7 @@ namespace GavinCardGame.Screens.Objects
         {
             _UserNameText = GetMenuItem<MText>("UserNameText");
             _PortText = GetMenuItem<MText>("PortText");
+            _DefaultHostText = GetMenuItem<MText>("DefaultHostText");
             _DoneButton = GetMenuItem<MButton>("DoneButton");
 
             _DoneButton.OnClicked += _DoneButton_OnClicked;
@@ -40,6 +41,10 @@ namespace GavinCardGame.Screens.Objects
             if (int.TryParse(_PortText.Text, out int _port) && _port < 65000 && _port > 1025)
                 GSettings.Port = _port;
 
+            GSettings.DefaultHost = _DefaultHostText.Text.Trim();
+
+            GSettings.Save();
+
             GScreens.OpenScreen<MainScreen>();
         }
 
@@ -49,6 +54,7 @@ namespace GavinCardGame.Screens.Objects
 
             _UserNameText.Text = GSettings.Name;
             _PortText.Text = GSettings.Port.ToString();
+            _DefaultHostText.Text = GSettings.DefaultHost;
         }
 
         public override void Update(GameTime gameTime)
