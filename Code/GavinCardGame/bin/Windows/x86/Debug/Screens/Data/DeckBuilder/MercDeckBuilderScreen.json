@@ -1,0 +1,28 @@
+﻿{
+	Background: "Textures/Backgrounds/mainscreen",
+	Menus: [
+		{
+			Name: "MainGroup",
+			Type: "Group",
+			Text: "Merc Deck Builder",
+			Position: "0, 10",
+			Size: "80%, 20%",
+			Bgc: "200, 50, 50, 255",
+			Align: "Center, Middle",
+			ShowText: "yes",
+		},
+
+		{
+			Name: "DoneButton",
+			Type: "Button",
+			Text: "Done",
+			Position: "0, 5%",
+			Size: "10%, 10%",
+			Align: "Center, Bottom",
+			Bgc: "50, 50, 50, 255",
+			HoverBgc: "50, 100, 100, 255",
+			BorderColor: "255, 255, 255, 255",
+			BorderThickness: "2",
+		},
+	]
+}

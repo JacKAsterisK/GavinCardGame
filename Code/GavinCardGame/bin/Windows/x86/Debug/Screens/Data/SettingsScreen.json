@@ -1,0 +1,80 @@
+﻿{
+	Background: "Textures/Backgrounds/mainscreen",
+	Menus: [
+
+		{
+			Name: "MainGroup",
+			Type: "Group",
+			Position: "0, 10",
+			Size: "60%, 60%",
+			Align: "Center, Middle",
+			Items: [
+				{
+					Name: "UserNameLabel",
+					Type: "Text",
+					Text: "User Name:",
+					Position: "0, 0",
+					Size: "20%, 10%",
+					Align: "Left, Top",
+					Bgc: "50, 50, 50, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "2",
+				},
+				{
+					Name: "UserNameText",
+					Type: "Text",
+					Text: "",
+					Position: "20%, 0",
+					Size: "80%, 10%",
+					Align: "Left, Top",
+					Bgc: "50, 50, 50, 255",
+					HoverBgc: "50, 100, 100, 255",
+					FocusBgc: "50, 50, 75, 255",
+					FocusHoverBgc: "50, 75, 100, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "2",
+				},
+
+				{
+					Name: "PortLabel",
+					Type: "Text",
+					Text: "Port:",
+					Position: "0, 15%",
+					Size: "20%, 10%",
+					Align: "Left, Top",
+					Bgc: "50, 50, 50, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "2",
+				},
+				{
+					Name: "PortText",
+					Type: "Text",
+					Text: "",
+					Position: "20%, 15%",
+					Size: "80%, 10%",
+					Align: "Left, Top",
+					Bgc: "50, 50, 50, 255",
+					HoverBgc: "50, 100, 100, 255",
+					FocusBgc: "50, 50, 75, 255",
+					FocusHoverBgc: "50, 75, 100, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "2",
+				},
+			]
+		},
+
+		{
+			Name: "DoneButton",
+			Type: "Button",
+			Text: "Done",
+			Position: "0, 5%",
+			Size: "10%, 10%",
+			Align: "Center, Bottom",
+			Bgc: "50, 50, 50, 255",
+			HoverBgc: "50, 100, 100, 255",
+			BorderColor: "255, 255, 255, 255",
+			BorderThickness: "2",
+		},
+
+	]
+}

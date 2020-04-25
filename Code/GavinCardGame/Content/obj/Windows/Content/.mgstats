@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Git/GavinCardGame/Code/GavinCardGame/Content/Fonts/menu.spritefont","C:/Git/GavinCardGame/Code/GavinCardGame/Content/bin/Windows/Content/Fonts/menu.xnb","FontDescriptionProcessor","SpriteFontContent",2005,70673,0.4750928
+"C:/Git/GavinCardGame/Code/GavinCardGame/Content/Textures/Backgrounds/mainscreen.jpg","C:/Git/GavinCardGame/Code/GavinCardGame/Content/bin/Windows/Content/Textures/Backgrounds/mainscreen.xnb","TextureProcessor","Texture2DContent",26401,8294485,0.3699375
+"C:/Git/GavinCardGame/Code/GavinCardGame/Content/Textures/card.png","C:/Git/GavinCardGame/Code/GavinCardGame/Content/bin/Windows/Content/Textures/card.xnb","TextureProcessor","Texture2DContent",2829,720085,0.0288925
+"C:/Git/GavinCardGame/Code/GavinCardGame/Content/Textures/rect.png","C:/Git/GavinCardGame/Code/GavinCardGame/Content/bin/Windows/Content/Textures/rect.xnb","TextureProcessor","Texture2DContent",935,149,0.0080057

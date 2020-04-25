@@ -359,4 +359,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-!GavinCardGame/bin/Windows/x86/Debug/**
+!GavinCardGame/**
+GavinCardGame/obj
+GavinCardGame/Content/bin/**

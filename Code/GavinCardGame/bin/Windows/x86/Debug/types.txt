@@ -1,0 +1,16 @@
+GavinCardGame.Menus.Objects.MbMercDeck
+GavinCardGame.Menus.Objects.MbMercSlot
+GavinCardGame.Menus.Objects.MbKfDeck
+GavinCardGame.Menus.Objects.MbHand
+GavinCardGame.Menus.Objects.MbCooldownPile
+GavinCardGame.Menus.Objects.MbHistory
+GavinCardGame.Menus.Objects.MbBmCardSlots
+GavinCardGame.Menus.Objects.MbCoffer
+GavinCardGame.Menus.Objects.MbOppHand
+GavinCardGame.Menus.Objects.MbCharProfile
+GavinCardGame.Menus.Objects.MbOppCharProfile
+GavinCardGame.Menus.Objects.MbWall
+GavinCardGame.Menus.Objects.MbBoard
+GavinCardGame.Menus.Objects.MListItem
+GavinCardGame.Menus.Objects.MList
+GavinCardGame.Menus.Objects.MText
