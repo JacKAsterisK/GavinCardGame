@@ -38,7 +38,7 @@ namespace GavinCardGame.Menus.Objects
                 );
             }
 
-            float _height = Size.X / Rows;
+            float _height = Size.Y / Rows;
             for (int _index = 1; _index < Rows; _index++)
             {
                 GGraphics.DrawLine(
