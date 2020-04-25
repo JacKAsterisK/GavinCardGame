@@ -1,0 +1,29 @@
+﻿{
+	Background: "Textures/Backgrounds/mainscreen",
+	Menus: [
+		{
+			Name: "MyName",
+			Type: "Label",
+			Position: "10%, 10%",
+			Align: "Left, Top",
+		},
+
+		{
+			Name: "OpponentName",
+			Type: "Label",
+			Position: "10%, 10%",
+			Align: "Right, Top",
+		},
+
+		{
+			Name: "MainGroup",
+			Type: "Group",
+			Text: "Game Board",
+			Position: "0, 10",
+			Size: "80%, 20%",
+			Bgc: "200, 50, 50, 255",
+			Align: "Center, Middle",
+			ShowText: "yes",
+		},
+	]
+}

@@ -1,0 +1,49 @@
+﻿{
+	Background: "Textures/Backgrounds/mainscreen",
+	Menus: [
+		{
+			Name: "MainMenu",
+			Type: "List",
+			Position: "50%, 50%",
+			Size: "50%, 80%",
+			Align: "Center, Middle",
+			ItemHeight: "10%",
+			ItemSpacing: "3%",
+			Items: [
+				{
+					Name: "MercDeckBuilder",
+					Type: "ListItem",
+					Text: "Merc Deck Builder",
+					Align: "Center, Middle",
+					Bgc: "50, 50, 50, 255",
+					HoverBgc: "50, 100, 100, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "2",
+				},
+				{
+					Name: "KfDeckBuilder",
+					Type: "ListItem",
+					Text: "King's Fortune Deck Builder",
+					Align: "Center, Middle",
+					Bgc: "50, 50, 50, 255",
+					HoverBgc: "50, 100, 100, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "2",
+				},
+			]
+		},
+
+		{
+			Name: "DoneButton",
+			Type: "Button",
+			Text: "Done",
+			Position: "0, 5%",
+			Size: "10%, 10%",
+			Align: "Center, Bottom",
+			Bgc: "50, 50, 50, 255",
+			HoverBgc: "50, 100, 100, 255",
+			BorderColor: "255, 255, 255, 255",
+			BorderThickness: "2",
+		},
+	]
+}

@@ -1,0 +1,38 @@
+﻿{
+	Background: "Textures/Backgrounds/mainscreen",
+	Menus: [
+		{
+			Name: "OpponentGroup",
+			Type: "Group",
+			Position: "0, 50%",
+			Size: "80%, 20%",
+			Align: "Center, Middle",
+			Items: [
+				{
+					Name: "OpponentLabel",
+					Type: "Label",
+					Text: "Opponent",
+					Position: "0, 50%",
+					Size: "20%, 100%",
+					Align: "Left, Middle",
+					TextAlign: "Center, Middle",
+					Bgc: "50, 50, 50, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "4",
+				},
+				{
+					Name: "OpponentText",
+					Type: "Text",
+					Text: "Waiting...",
+					Position: "0, 50%",
+					Size: "80%, 100%",
+					Align: "Right, Middle",
+					TextAlign: "Center, Middle",
+					Bgc: "50, 50, 50, 255",
+					BorderColor: "255, 255, 255, 255",
+					BorderThickness: "4",
+				},
+			],
+		},
+	]
+}
