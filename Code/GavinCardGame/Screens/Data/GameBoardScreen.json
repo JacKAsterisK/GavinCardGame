@@ -1,29 +1,350 @@
 ﻿{
 	Background: "Textures/Backgrounds/mainscreen",
-	Menus: [
-		{
-			Name: "MyName",
-			Type: "Label",
-			Position: "10%, 10%",
-			Align: "Left, Top",
-		},
+  Menus: [
+    {
+      "Name": "MyName",
+      "Type": "Label",
+      "Position": "10%, 10%",
+      "Align": "Left, Top"
+    },
 
-		{
-			Name: "OpponentName",
-			Type: "Label",
-			Position: "10%, 10%",
-			Align: "Right, Top",
-		},
+    {
+      "Name": "OpponentName",
+      "Type": "Label",
+      "Position": "10%, 10%",
+      "Align": "Right, Top"
+    },
 
-		{
-			Name: "MainGroup",
-			Type: "Group",
-			Text: "Game Board",
-			Position: "0, 10",
-			Size: "80%, 20%",
-			Bgc: "200, 50, 50, 255",
-			Align: "Center, Middle",
-			ShowText: "yes",
-		},
-	]
+    {
+      "Name": "MainGroup",
+      "Type": "Group",
+      "Position": "0, 0",
+      "Size": "100%, 100%",
+      "Bgc": "50, 50, 50, 255",
+      "Align": "Center, Top",
+      "Items": [
+
+        // ------------------------------
+        // Board
+        // ------------------------------
+        {
+          "Name": "Board",
+          "Type": "bBoard",
+          "Position": "50%, 2%",
+          "Size": "1300, 700",
+          "Align": "Center, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        // ------------------------------
+
+        // ------------------------------
+        // Coffer
+        // ------------------------------
+        {
+          "Name": "Coffer",
+          "Type": "bCoffer",
+          "Position": "1%, 5%",
+          "Size": "150, 300",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        // ------------------------------
+
+
+        // ------------------------------
+        // Walls
+        // ------------------------------
+        {
+          "Name": "Wall1",
+          "Type": "bWall",
+          "Position": "50%, 1%",
+          "Size": "70%, 30",
+          "Align": "Center, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Wall2",
+          "Type": "bWall",
+          "Position": "50%, 32%",
+          "Size": "70%, 30",
+          "Align": "Center, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        // ------------------------------
+        // ------------------------------
+        // Decks \ Piles
+        // ------------------------------
+        {
+          "Name": "MercDeck",
+          "Type": "bMercDeck",
+          "Position": "10%, 70%",
+          "Size": "100, 150",
+          "Align": "left, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "KFortuneDeck",
+          "Type": "bKfDeck",
+          "Position": "80%, 85%",
+          "Size": "100, 150",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "CooldownPile",
+          "Type": "bCooldownPile",
+          "Position": "88%, 85%",
+          "Size": "200, 100",
+          "Align": "right, bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "History",
+          "Type": "bHistory",
+          "Position": "2%, 10%",
+          "Size": "100, 550",
+          "Align": "left, top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+
+
+        // ------------------------------
+        // MercSlots
+        // ------------------------------
+        {
+          "Name": "MercSlot1",
+          "Type": "bMercSlot",
+          "Position": "25%, 69%",
+          "Size": "90, 135",
+          "Align": "Left, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "MercSlot2",
+          "Type": "bMercSlot",
+          "Position": "35%, 69%",
+          "Size": "90, 135",
+          "Align": "Left, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "MercSlot3",
+          "Type": "bMercSlot",
+          "Position": "45%, 69%",
+          "Size": "90, 135",
+          "Align": "Left, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "MercSlot4",
+          "Type": "bMercSlot",
+          "Position": "55%, 69%",
+          "Size": "90, 135",
+          "Align": "Left, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "MercSlot5",
+          "Type": "bMercSlot",
+          "Position": "65%, 69%",
+          "Size": "90, 135",
+          "Align": "left, Top",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        // ------------------------------
+        // HAND (King's Fortune cards)
+        // ------------------------------
+        {
+          "Name": "Handslot1",
+          "Type": "bHand",
+          "Position": "21%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot2",
+          "Type": "bHand",
+          "Position": "28%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot3",
+          "Type": "bHand",
+          "Position": "35%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot4",
+          "Type": "bHand",
+          "Position": "42%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot5",
+          "Type": "bHand",
+          "Position": "49%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot6",
+          "Type": "bHand",
+          "Position": "56%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot7",
+          "Type": "bHand",
+          "Position": "63%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        },
+        {
+          "Name": "Handslot8",
+          "Type": "bHand",
+          "Position": "70%, 3%",
+          "Size": "90, 135",
+          "Align": "left, Bottom",
+          "Bgc": "50, 50, 50, 255",
+          "HoverBgc": "50, 100, 100, 255",
+          "FocusBgc": "50, 50, 75, 255",
+          "FocusHoverBgc": "50, 75, 100, 255",
+          "BorderColor": "255, 255, 255, 255",
+          "BorderThickness": "4",
+          "ShowType": "yes"
+        }
+      ]
+    }
+  ]
 }
