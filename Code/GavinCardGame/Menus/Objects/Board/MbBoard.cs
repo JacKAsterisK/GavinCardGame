@@ -11,25 +11,45 @@ namespace GavinCardGame.Menus.Objects
 {
     public class MbBoard : MenuBase
     {
+        public int Rows { get; private set; }
+        public int Cols { get; private set; }
+
         public MbBoard(MenuData data, MenuBase parent) : base(data, parent)
         {
+            Rows = int.Parse(data.GetDataProperty("Rows").ToString());
+            Cols = int.Parse(data.GetDataProperty("Cols").ToString());
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch sb)
         {
             base.Draw(gameTime, sb);
 
-            if (!string.IsNullOrWhiteSpace(Type))
+            float _width = Size.X / Cols;
+            for (int _index = 1; _index < Cols; _index++)
             {
-                Vector2 _pos = ActualPosition;
+                GGraphics.DrawLine(
+                    ActualPosition.ToPoint() + new Point((int)_width * _index, 0),
+                    (int)Size.Y,
+                    2,
+                    false,
+                    Color.White,
+                    Depth - StringBorderDepthAdd,
+                    sb
+                );
+            }
 
-                Vector2 _tSize = GContent.MenuFont.MeasureString(Type);
-                Vector2 _tPos = _pos;
-
-                _tPos.X += Size.X / 2 - _tSize.X / 2;
-                _tPos.Y += Size.Y / 2 - _tSize.Y / 2;
-
-                sb.DrawString(GContent.MenuFont, Type, _tPos, Color.White);
+            float _height = Size.X / Rows;
+            for (int _index = 1; _index < Rows; _index++)
+            {
+                GGraphics.DrawLine(
+                    ActualPosition.ToPoint() + new Point(0, (int)_height * _index),
+                    (int)Size.X,
+                    2,
+                    true,
+                    Color.White,
+                    Depth - StringBorderDepthAdd,
+                    sb
+                );
             }
         }
     }

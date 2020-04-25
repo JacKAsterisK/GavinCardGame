@@ -30,6 +30,8 @@
         {
           "Name": "Board",
           "Type": "bBoard",
+          "Rows": "10",
+          "Cols": "10",
           "Position": "50%, 2%",
           "Size": "1300, 700",
           "Align": "Center, Top",

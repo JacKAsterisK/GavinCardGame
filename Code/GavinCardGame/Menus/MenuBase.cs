@@ -46,7 +46,7 @@ namespace GavinCardGame.Menus
         public string Text { get; set; }
         public Vector2 Position { get; protected set; }
         public Vector2 Size { get; protected set; }
-        public float Depth { get; protected set; }
+        public float Depth { get; set; }
         public MenuHAlign HAlign { get; protected set; }
         public MenuVAlign VAlign { get; protected set; }
         public MenuHAlign TextHAlign { get; protected set; }

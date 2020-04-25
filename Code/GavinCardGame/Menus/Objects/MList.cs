@@ -80,6 +80,7 @@ namespace GavinCardGame.Menus.Objects
                 if (_item is MListItem)
                 {
                     var _listItem = (MListItem)_item;
+                    _listItem.Depth = Depth;
                     _listItem.SetList(this, _index);
                     ListItems.Add(_listItem);
                 }

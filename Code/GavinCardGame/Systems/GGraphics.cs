@@ -22,6 +22,48 @@ namespace GavinCardGame.Systems
             RectTex = GSystems.GContent.Load<Texture2D>("Textures/rect");
         }
 
+        public void DrawLine(Point start, int length, int thickness, bool horizontal, Color c, float depth, SpriteBatch sb)
+        {
+            int _halfThickness = thickness / 2;
+
+            if (horizontal)
+            {
+                sb.Draw(
+                    RectTex,
+                    new Rectangle(
+                        start.X,
+                        start.Y - _halfThickness,
+                        length,
+                        thickness
+                    ),
+                    null,
+                    c,
+                    0,
+                    Vector2.Zero,
+                    SpriteEffects.None,
+                    depth
+                );
+            }
+            else
+            {
+                sb.Draw(
+                    RectTex,
+                    new Rectangle(
+                        start.X - _halfThickness,
+                        start.Y,
+                        thickness,
+                        length
+                    ),
+                    null,
+                    c,
+                    0,
+                    Vector2.Zero,
+                    SpriteEffects.None,
+                    depth
+                );
+            }
+        }
+
         public void FillRectangle(Rectangle r, Color c, float depth, SpriteBatch sb)
         {
             sb.Draw(RectTex, r, null, c, 0, Vector2.Zero, SpriteEffects.None, depth);
