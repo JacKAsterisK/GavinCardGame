@@ -20,7 +20,6 @@ namespace GavinCardGame.Screens.Objects
             ,_PlayClientButton
             ,_DeckBuilderButton
             ,_SettingsButton
-        //,_GameBoardButton
         ;
 
         public MainScreen() : base("MainScreen")
@@ -29,13 +28,11 @@ namespace GavinCardGame.Screens.Objects
             _PlayClientButton = GetMenuItem<MListItem>("PlayClient");
             _DeckBuilderButton = GetMenuItem<MListItem>("DeckBuilder");
             _SettingsButton = GetMenuItem<MListItem>("Settings");
-            //_GameBoardButton = GetMenuItem<MListItem>("GameBoard");
 
             _PlayServerButton.OnClicked += _PlayServerButton_OnClicked;
             _PlayClientButton.OnClicked += _PlayClientButton_OnClicked;
             _DeckBuilderButton.OnClicked += _DeckBuilderButton_OnClicked;
             _SettingsButton.OnClicked += _SettingsButton_OnClicked;
-            //_GameBoardButton.OnClicked += _GameBoardButton_OnClicked;
         }
 
         public override void Opened()
@@ -70,10 +67,6 @@ namespace GavinCardGame.Screens.Objects
         {
             GScreens.OpenScreen<SettingsScreen>();
         }
-        //private void _GameBoardButton_OnClicked(MenuBase mBase)
-        //{
-        //    GScreens.OpenScreen<GameBoardScreen>();
-        //}
 
         public override void Update(GameTime gameTime)
         {

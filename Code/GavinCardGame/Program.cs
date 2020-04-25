@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Windows.Forms;
 
 namespace GavinCardGame
 {
@@ -18,7 +21,26 @@ namespace GavinCardGame
         {
             if (args != null && args.Length > 0)
             {
-                PlayAs = args[0].Split('=')[1];
+                foreach (var _arg in args)
+                {
+                    if (_arg == "debugger")
+                    {
+                        var _dir = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("Code"));
+
+                        if (true)
+                        {
+                            Process.Start($"{_dir}PlayServer.bat");
+                            PlayAs = "client";
+                        }
+                        else
+                        {
+                            Process.Start($"{_dir}PlayClient.bat");
+                            PlayAs = "server";
+                        }
+                    }
+                    else if (_arg.Contains("playas"))
+                        PlayAs = args[0].Split('=')[1];
+                }
             }
 
             using (var game = new MainGame())

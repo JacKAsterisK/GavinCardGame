@@ -46,6 +46,7 @@ namespace GavinCardGame.Menus
         public string Text { get; set; }
         public Vector2 Position { get; protected set; }
         public Vector2 Size { get; protected set; }
+        public float Depth { get; protected set; }
         public MenuHAlign HAlign { get; protected set; }
         public MenuVAlign VAlign { get; protected set; }
         public MenuHAlign TextHAlign { get; protected set; }
@@ -60,6 +61,8 @@ namespace GavinCardGame.Menus
         public bool ShowType { get; private set; }
         public MenuBase Parent { get; private set; }
         public List<MenuBase> Items { get; private set; }
+
+        public float StringBorderDepthAdd = 0.01f;
 
         public Vector2 ActualPosition
         {
@@ -124,6 +127,11 @@ namespace GavinCardGame.Menus
 
             if (!string.IsNullOrWhiteSpace(Data.Size))
                 Size = Vec2FromString(Data.Size);
+
+            if (!string.IsNullOrWhiteSpace(Data.Depth))
+                Depth = float.Parse(Data.Depth);
+            else
+                Depth = 0.99f;
 
             if (!string.IsNullOrWhiteSpace(Data.Align))
             {
@@ -282,16 +290,32 @@ namespace GavinCardGame.Menus
             if (!Focused || FocusBgc == null)
             {
                 if (Bgc != null)
-                    GGraphics.FillRectangle(Bounds, Hovering ? HoverBgc ?? Bgc.Value : Bgc.Value, 0.6f, sb);
+                    GGraphics.FillRectangle(
+                        Bounds, 
+                        Hovering ? HoverBgc ?? Bgc.Value : Bgc.Value,
+                        Depth, 
+                        sb
+                    );
             }
             else if (Focused && FocusBgc != null)
             {
                 if (FocusBgc != null)
-                    GGraphics.FillRectangle(Bounds, Hovering ? FocusHoverBgc ?? FocusBgc.Value : FocusBgc.Value, 0.6f, sb);
+                    GGraphics.FillRectangle(
+                        Bounds, 
+                        Hovering ? FocusHoverBgc ?? FocusBgc.Value : FocusBgc.Value, 
+                        Depth, 
+                        sb
+                    );
             }
 
             if (BorderColor != null)
-                GGraphics.DrawRectangle(Bounds, BorderColor.Value, BorderThickness, 0.5f, sb);
+                GGraphics.DrawRectangle(
+                    Bounds, 
+                    BorderColor.Value, 
+                    BorderThickness,
+                    Depth - StringBorderDepthAdd, 
+                    sb
+                );
 
             foreach (var _item in Items)
                 _item.Draw(gameTime, sb);
@@ -308,7 +332,17 @@ namespace GavinCardGame.Menus
                 _tPos.X += Size.X / 2 - _tSize.X / 2;
                 _tPos.Y += Size.Y / 2 - _tSize.Y / 2;
 
-                sb.DrawString(GContent.MenuFont, Type, _tPos, Color.White);
+                sb.DrawString(
+                    GContent.MenuFont, 
+                    Type, 
+                    _tPos, 
+                    Color.White,
+                    0,
+                    Vector2.Zero,
+                    1.0f,
+                    SpriteEffects.None,
+                    Depth - StringBorderDepthAdd
+                );
             }
 
             // Show text
@@ -334,7 +368,17 @@ namespace GavinCardGame.Menus
                         case MenuVAlign.Middle: _tPos.Y += Size.Y / 2 - _tSize.Y / 2; break;
                     }
 
-                    sb.DrawString(GContent.MenuFont, Text, _tPos, Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0.4f);
+                    sb.DrawString(
+                        GContent.MenuFont, 
+                        Text, 
+                        _tPos, 
+                        Color.White, 
+                        0f, 
+                        Vector2.Zero, 
+                        1, 
+                        SpriteEffects.None,
+                        Depth - StringBorderDepthAdd
+                    );
                 }
             }
         }

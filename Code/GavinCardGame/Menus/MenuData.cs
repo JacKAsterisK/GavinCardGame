@@ -16,6 +16,7 @@ namespace GavinCardGame.Menus
         public string Text;
         public string Position;
         public string Size;
+        public string Depth;
         public string Align;
         public string TextAlign;
         public string TextMargin;
@@ -38,6 +39,7 @@ namespace GavinCardGame.Menus
             Text = JObject["Text"]?.ToString();
             Position = JObject["Position"]?.ToString();
             Size = JObject["Size"]?.ToString();
+            Depth = JObject["Depth"]?.ToString();
             Align = JObject["Align"]?.ToString();
             TextAlign = JObject["TextAlign"]?.ToString();
             TextAlign = JObject["TextAlign"]?.ToString();

@@ -47,7 +47,17 @@ namespace GavinCardGame.Menus.Objects
             _tPos.X += Size.X / 2 - _tSize.X / 2;
             _tPos.Y += Size.Y / 2 - _tSize.Y / 2;
 
-            sb.DrawString(GContent.MenuFont, Text, _tPos, Color.White);
+            sb.DrawString(
+                GContent.MenuFont,
+                Text,
+                _tPos,
+                Color.White,
+                0,
+                Vector2.Zero,
+                1.0f,
+                SpriteEffects.None,
+                Depth - StringBorderDepthAdd
+            );
         }
     }
 
