@@ -21,6 +21,7 @@ namespace GavinCardGame.Screens.Objects
             _ConnectButton = GetMenuItem<MButton>("ConnectButton");
 
             _IpTextBox.Filters = Systems.AllowKeyString.All | ~Systems.AllowKeyString.Space;
+            _IpTextBox.Text = GSettings.DefaultHost;
 
             _IpTextBox.OnEnterPressed += _IpTextBox_OnEnterPressed;
             _ConnectButton.OnClicked += _ConnectButton_OnClicked;
@@ -30,9 +31,13 @@ namespace GavinCardGame.Screens.Objects
 
         private void _IpTextBox_OnEnterPressed(MText textBox)
         {
-            _ConnectButton_OnClicked(null);
+            Connect();
         }
         private void _ConnectButton_OnClicked(Menus.MenuBase mBase)
+        {
+            Connect();
+        }
+        public void Connect()
         {
             if (GNet.StartClient(_IpTextBox.Text))
                 _ConnectButton.BorderColor = Color.Aqua;

@@ -38,6 +38,22 @@ namespace GavinCardGame.Screens.Objects
             //_GameBoardButton.OnClicked += _GameBoardButton_OnClicked;
         }
 
+        public override void Opened()
+        {
+            base.Opened();
+
+            if (!string.IsNullOrWhiteSpace(Program.PlayAs))
+            {
+                if (Program.PlayAs.ToLower() == "server")
+                    GScreens.OpenScreen<ServerConnectScreen>();
+                else if (Program.PlayAs.ToLower() == "client")
+                {
+                    var _screen = GScreens.OpenScreen<ClientConnectScreen>();
+                    _screen.Connect();
+                }
+            }
+        }
+
         private void _PlayServerButton_OnClicked(MenuBase mBase)
         {
             GScreens.OpenScreen<ServerConnectScreen>();
